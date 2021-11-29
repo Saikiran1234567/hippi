@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lokeshwara17071998/hippi#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   }
 }

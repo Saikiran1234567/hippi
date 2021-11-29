@@ -1,0 +1,22 @@
+{
+  "name": "hippi",
+  "version": "1.0.0",
+  "description": "Hippi signup Api",
+  "main": "signup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokeshwara17071998/hippi.git"
+  },
+  "author": "lokesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lokeshwara17071998/hippi/issues"
+  },
+  "homepage": "https://github.com/lokeshwara17071998/hippi#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

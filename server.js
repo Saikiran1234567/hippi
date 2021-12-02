@@ -1,13 +1,28 @@
 const express = require('express')
-const app = express();
-let router = express.Router();
+const bodyParser = require("body-parser")
 const cors = require("cors");
-app.use(cors());
-
-app.use(express.json());
+var router = express.Router();
+const passport = require("passport");
+const session = require("express-session");
 const SignUp = require("./routes/SignUp");
+const Login = require("./routes/Login");
+const flash = require('connect-flash');
+const app = express();
+
+app.use(require('express-session')({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true
+  }));
+app.use(cors());
+app.use(flash());
+app.use(passport.initialize());
+app.use(express.json());
+app.use(passport.session());
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use("/api",SignUp);
+app.use("/api",Login);
 
 app.listen(4001,(error)=>{
     if(error) console.log(error);
